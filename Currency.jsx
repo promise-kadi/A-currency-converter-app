@@ -250,6 +250,9 @@ if(fromm == "Euro" && too == "Pounds"){
   setRate(etru)
 }
 }
+ const handleclear = () => {
+  amtRef.current.value = "";
+};
     
 
   return (
@@ -291,7 +294,7 @@ if(fromm == "Euro" && too == "Pounds"){
     }}> Convert</button>
         <button style={{margin: "10px 35%",width: "100px",height: "35px",
       fontWeight: "bold",color: "white",background: "black",cursor: "pointer"
-    }}>
+    }} onClick={handleclear}>
         Reset
         </button>
         <h1 style={{textAlign: "center"}}>{val.toLocaleString()}</h1>
